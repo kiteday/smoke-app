@@ -1,0 +1,16 @@
+.DS_Store
+.env
+.env.*
+
+# Xcode / Swift build output and local user state
+DerivedData/
+.build/
+.build-device/
+*.xcarchive/
+xcuserdata/
+*.xcuserstate
+
+# Exported apps and transient release logs
+*.ipa
+*.log
+release/local-export-*/

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#171613" />
+    <meta name="description" content="탭으로 즐기는 감각적인 스모킹 시뮬레이터" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>담타고고</title>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <button class="icon-button" id="soundButton" aria-label="소리 켜기">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6.8 8.5H3v7h3.8L11 19V5Zm4.5 3.2a5.3 5.3 0 0 1 0 7.6M18 5.7a9 9 0 0 1 0 12.6"/></svg>
+        </button>
+        <div class="wordmark">담타고고<span>•</span></div>
+        <button class="icon-button" id="resetButton" aria-label="초기화">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.9 8.4A8 8 0 1 1 4 14M4.9 8.4V4m0 4.4h4.4"/></svg>
+        </button>
+      </header>
+
+      <section class="intro" id="intro">
+        <p class="eyebrow">POCKET RITUAL</p>
+        <h1>잠깐의<br /><em>느린 숨.</em></h1>
+        <p class="lead">오늘의 기분에 맞는 한 가지를 골라보세요.</p>
+      </section>
+
+      <section class="selector" id="selector" aria-label="흡연 도구 선택">
+        <button class="product-card cigarette-card" data-kind="cigarette">
+          <span class="product-kicker">CLASSIC</span>
+          <img src="assets/cigarette-pack.png" alt="검은색 담뱃갑" />
+          <span class="product-meta"><b>클래식</b><small><i></i><span id="packCount">20개비</span></small></span>
+          <span class="select-arrow">↗</span>
+        </button>
+        <button class="product-card vape-card" data-kind="vape">
+          <span class="product-kicker">POD</span>
+          <img src="assets/vape.png" alt="검은색 전자담배" />
+          <span class="product-meta"><b>포드</b><small><i></i><span id="podCount">100%</span></small></span>
+          <span class="select-arrow">↗</span>
+        </button>
+      </section>
+
+      <section class="smoke-stage" id="smokeStage" aria-live="polite">
+        <div class="stage-top">
+          <button class="back-button" id="backButton" aria-label="뒤로 가기">←</button>
+          <div><span id="stageLabel">CLASSIC</span><b id="stageCount">20개비 남음</b></div>
+          <button class="more-button" aria-label="더 보기">•••</button>
+        </div>
+        <div class="smoke-cloud" id="smokeCloud" aria-hidden="true"></div>
+        <div class="object-scene" id="objectScene">
+          <img class="stage-product" id="stageProduct" alt="" />
+          <div class="cigarette" id="cigarette" aria-hidden="true">
+            <span class="ash"></span><span class="ember"></span><span class="paper"></span><span class="filter"></span>
+          </div>
+          <div class="vape-glow" id="vapeGlow"></div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>한 번의 휴식</span><b id="progressText">100%</b></div>
+          <div class="progress"><span id="progressBar"></span></div>
+        </div>
+        <button class="ritual-button" id="ritualButton">
+          <span class="tap-ring"><span></span></span>
+          <b id="actionTitle">꺼내려면 탭하세요</b>
+          <small id="actionHint">화면 어디든 가볍게</small>
+        </button>
+      </section>
+
+      <section class="ad-slot" aria-label="광고">
+        <div class="ad-badge">AD</div>
+        <div class="ad-copy"><b>여기에 Google 배너 광고</b><span>AdMob 테스트 광고 자리 · 320 × 50</span></div>
+        <span class="ad-info">ⓘ</span>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

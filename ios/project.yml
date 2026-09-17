@@ -1,0 +1,52 @@
+name: SMOK
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "26.0"
+packages:
+  GoogleMobileAds:
+    url: https://github.com/googleads/swift-package-manager-google-mobile-ads.git
+    from: 13.0.0
+targets:
+  SMOK:
+    type: application
+    platform: iOS
+    productName: Damtagogo
+    info:
+      path: SMOK/Info.plist
+      properties:
+        CFBundleDisplayName: 담타고고
+        CFBundleShortVersionString: "1.0"
+        CFBundleVersion: "3"
+        ITSAppUsesNonExemptEncryption: false
+        NSFaceIDUsageDescription: 담타고고 앱 잠금을 해제하기 위해 Face ID를 사용합니다.
+        GADApplicationIdentifier: ca-app-pub-6828399849556449~7653805834
+        UILaunchScreen: {}
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+          UISceneConfigurations: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        SKAdNetworkItems:
+          - SKAdNetworkIdentifier: cstr6suwn9.skadnetwork
+    sources:
+      - path: SMOK
+    dependencies:
+      - package: GoogleMobileAds
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.hyeminyang.damtago
+        PRODUCT_NAME: Damtagogo
+        SWIFT_VERSION: 6.0
+        TARGETED_DEVICE_FAMILY: "1"
+        INFOPLIST_KEY_UIRequiresFullScreen: YES
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        CODE_SIGN_STYLE: Automatic
+schemes:
+  SMOK:
+    build:
+      targets:
+        SMOK: all
+    run:
+      config: Debug

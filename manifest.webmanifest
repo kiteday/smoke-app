@@ -1,0 +1,9 @@
+{
+  "name": "담타고고",
+  "short_name": "담타고고",
+  "description": "탭으로 즐기는 감각적인 스모킹 시뮬레이터",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#171613",
+  "theme_color": "#171613"
+}
